@@ -4,68 +4,96 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Create</h1>
-
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-6">
+                <h3>Create Product</h3>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+            <div class="col-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">                                       <i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item active">Create Products</li>
+                </ol>
             </div>
-            <div class="form-group">
-                <label asp-for="Color" class="control-label"></label>
-                <input asp-for="Color" class="form-control" />
-                <span asp-validation-for="Color" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Qty" class="control-label"></label>
-                <input asp-for="Qty" class="form-control" />
-                <span asp-validation-for="Qty" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Smell" class="control-label"></label>
-                <input asp-for="Smell" class="form-control" />
-                <span asp-validation-for="Smell" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryID" class="control-label"></label>
-                <select asp-for="CategoryID" class ="form-control" asp-items="ViewBag.CategoryID"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Created_at" class="control-label"></label>
-                <input asp-for="Created_at" class="form-control" />
-                <span asp-validation-for="Created_at" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Updated_at" class="control-label"></label>
-                <input asp-for="Updated_at" class="form-control" />
-                <span asp-validation-for="Updated_at" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <span>Please Make sure fill all the filed before click on next button</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form asp-action="Create">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Name" class="control-label"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Color" class="control-label"></label>
+                                    <input asp-for="Color" class="form-control" />
+                                    <span asp-validation-for="Color" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Qty" class="control-label"></label>
+                                    <input asp-for="Qty" class="form-control" />
+                                    <span asp-validation-for="Qty" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Price" class="control-label"></label>
+                                    <input asp-for="Price" class="form-control" />
+                                    <span asp-validation-for="Price" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Smell" class="control-label"></label>
+                                    <input asp-for="Smell" class="form-control" />
+                                    <span asp-validation-for="Smell" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CategoryID" class="control-label"></label>
+                                    <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Created_at" class="control-label"></label>
+                                    <input asp-for="Created_at" class="form-control" />
+                                    <span asp-validation-for="Created_at" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Updated_at" class="control-label"></label>
+                                    <input asp-for="Updated_at" class="form-control" />
+                                    <span asp-validation-for="Updated_at" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Create" class="btn btn-primary" />
+                                </div>
+                            </form>
+                            <div>
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+                   
+
+
+                </div>
+            </div>
+
+    </div>
 </div>
 
 @section Scripts {
